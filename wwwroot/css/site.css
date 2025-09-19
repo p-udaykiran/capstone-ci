@@ -3,3 +3,13 @@ body {
     background-color: #f8f9fa;
 }
 
+@media (max-width: 768px) {
+    .my-class {
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
