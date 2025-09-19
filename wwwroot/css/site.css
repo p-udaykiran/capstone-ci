@@ -13,3 +13,12 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+ @media (max-width: 768px) {
+            .sidebar {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
