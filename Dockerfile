@@ -8,7 +8,7 @@ RUN dotnet restore
 
 # Copy the rest of the application and build it
 COPY . ./
-RUN dotnet publish -c Release -o out
+RUN dotnet publish NoteApp.csproj -c Release -o out
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
