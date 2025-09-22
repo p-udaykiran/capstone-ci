@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'main', credentialsId: 'git-token', url: 'https://github.com/jaiswaladi246/Capstone-DotNET-Mongo-CI.git'
+                git branch: 'main', credentialsId: 'git-token', url: 'https://github.com/p-udaykiran/Capstone-DotNET-Mongo-CI.git'
             }
         }
         stage('Gitleaks Scan') {
@@ -81,7 +81,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'git-token', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         sh '''
                             # Clone the CD Repo
-                            git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/jaiswaladi246/Capstone-DotNET-Mongo-CD.git
+                            git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/p-udaykiran/Capstone-DotNET-Mongo-CD.git
                             
                             # Update the tag in manifest
                             cd Capstone-DotNET-Mongo-CD
