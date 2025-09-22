@@ -92,8 +92,8 @@ pipeline {
                             cat Manifest/manifest.yaml
                             
                             # Commit and push the changes
-                            git config user.name "Jenkins"
-                            git config user.email "jenkins@example.com"
+                            git config user.name "p-udaykiran"
+                            git config user.email "professional112004@gmail.com"
                             git add Manifest/manifest.yaml
                             git commit -m "Update image tag to ${IMAGE_TAG}"
                             git push origin main
